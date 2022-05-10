@@ -14,8 +14,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
 ## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
+  1. https://fontsempire.com/font/fedex-font/
+  2. https://usbrandcolors.com/fedex-colors/
   3. -...-
 
 
@@ -27,14 +27,17 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+ ![afbeelding](https://user-images.githubusercontent.com/103881571/167582765-1e49dcf3-a1d7-4639-9f94-b794a25d9a56.png)
+![afbeelding](https://user-images.githubusercontent.com/103881571/167582838-07f1887a-756f-4597-bc65-7e412cef13b1.png)
+![afbeelding](https://user-images.githubusercontent.com/103881571/167582889-13545763-ea4e-4177-b796-215c9e0a490c.png)
+
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
+  - Ik wil transform beter begrijpen en gebruiken zonder op te zoeken wat iets nou ookalweer deed. Of wat ik moest gebruiken om bijvoorbeeld te springen.
+  - Ik wil leren een box-shadow te gebruiken zonder op te zoeken welk getal welke richting is.
+  - Ik wil zelf een box-shadow gebruiken om een ronde vorm te maken.
   - ...
  
 </details>
