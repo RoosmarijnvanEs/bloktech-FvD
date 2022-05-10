@@ -27,9 +27,10 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
- ![afbeelding](https://user-images.githubusercontent.com/103881571/167582765-1e49dcf3-a1d7-4639-9f94-b794a25d9a56.png)
-![afbeelding](https://user-images.githubusercontent.com/103881571/167582838-07f1887a-756f-4597-bc65-7e412cef13b1.png)
-![afbeelding](https://user-images.githubusercontent.com/103881571/167582889-13545763-ea4e-4177-b796-215c9e0a490c.png)
+
+![storyboard fedex 2](https://user-images.githubusercontent.com/103881571/167588314-343cecd8-c99b-4ffa-9e9a-83f4ae7c286f.png)
+![storyboard fedex 3](https://user-images.githubusercontent.com/103881571/167588318-09fc4f89-f1f2-4ffc-ae0a-3e61d945a7c9.png)
+![storyboard fedex](https://user-images.githubusercontent.com/103881571/167588322-9ee38db7-10d9-4d4f-826b-2d94319fd6e0.png)
 
 
 
