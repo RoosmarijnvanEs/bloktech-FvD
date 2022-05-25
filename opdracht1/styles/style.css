@@ -4,17 +4,11 @@
 /* FONTS */
 /*********/
 @font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-
+    font-family: 'SansSerifBldFLF';
+    src:url('../fonts/SansSerifBldFLF.ttf.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
 }
-
-
-
-
 
 /**************/
 /* CSS REMEDY */
@@ -27,31 +21,245 @@ button, summary {
 	cursor: pointer;
 }
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
 	--color-background:#eee;
+	--color-fedex-purple:#4D148c;
+	--color-fedex-orange:#FF6600;
 }
-
-
-
-
 
 /****************/
 /* JOUW STYLING */
 /****************/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-text);
+  font-family:SansSerifBldFLF;
   background-color:var(--color-background);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
 }
 
-/* jouw code */
+
+
+/* vrachtwagen container */
+div {
+	position: fixed;
+	right: 100vw;	
+	bottom: calc(20vh + 2.25vw);
+	width: 30vw;	
+	animation: rijden 10s linear;
+}
+
+
+ /* vrachtwagen img */
+ div img {
+	 display: block;
+	width:100%;
+ }
+
+ /*Wielen*/
+ 
+div span:nth-of-type(1),
+div span:nth-of-type(2) {
+	  position: absolute;
+	  height: 4.5vw;
+	  width: 4.5vw;
+	  bottom: -2.25vw;
+	  background-image:
+	  	radial-gradient(closest-side, grey 30%, transparent 30% 70%, black 70%),
+		repeating-conic-gradient(transparent 0deg 15deg, grey 15deg 30deg);
+	  border-radius: 50%;
+	  animation: draaien 3s linear infinite;
+  } 
+
+/*Achterwiel*/
+
+div span:nth-of-type(1) {
+	right: 80%;	
+}
+
+/*voorwiel*/
+
+div span:nth-of-type(2) {
+	right: 5%;
+ }
+
+ /*Berg*/
+
+body::after{
+	content: "";
+	position:absolute;
+	height:calc((100vw + 30vw) * .04);
+	width: calc((100vw + 30vw) * .04);
+	bottom:20vh;
+	left:calc(50vw - (100vw + 30vw) * .02);
+	clip-path: polygon(0% 99%, 28% 72%, 45% 63%, 53% 68%, 62% 67%, 71% 76%, 77% 82%, 90% 92%, 97% 99%, 100% 100%);
+	background-color: gray;
+ }
+
+ /*Fedex letters*/
+
+h1{
+	font-size: 8vw;	
+}
+
+h1 span {
+	display: block;
+	position: relative;
+	position: fixed;
+	bottom: 28vh;
+	animation: rijden 10s linear infinite;
+	/* background-color: #0ff8; */
+	line-height: .7em;
+}
+
+/*fed*/
+
+h1 span:nth-of-type(1), 
+h1 span:nth-of-type(2), 
+h1 span:nth-of-type(3){
+	color:var(--color-fedex-purple);
+}
+
+/*ex*/
+
+h1 span:nth-of-type(4), 
+h1 span:nth-of-type(5){
+	color:var(--color-fedex-orange);	
+}
+
+/*F*/
+
+h1 span:nth-of-type(1){
+	right: 125.8vw;
+	animation: vallenf 10s linear forwards;
+}
+
+/*e*/
+
+h1 span:nth-of-type(2){
+	right: 122vw;
+	/* animation: vallene 10s linear infinite; */
+}
+
+/*d*/
+
+h1 span:nth-of-type(3){
+	right: 118.1vw;
+}
+
+/*E*/
+
+h1 span:nth-of-type(4){
+	right: 114.8vw;
+}
+
+/*x*/
+
+h1 span:nth-of-type(5){
+	right: 110.5vw;
+}
+
+/*Keyframes*/
+
+/*vrachtwagen rijden*/
+
+@keyframes rijden{
+	0% {
+		transform: translateX(0);
+	}
+
+	38.5%{
+		transform: translatex( calc((100vw + 30vw) * .385) ) rotate(0deg);
+		transform-origin: 20% 120%;
+	}
+
+	41%{
+		transform: translatex( calc((100vw + 30vw) * .41) ) rotate(-7deg);
+	}
+
+	44.5%{
+		transform: translatex( calc((100vw + 30vw) * .445) ) rotate(0deg);
+		transform-origin: 20% 120%;
+	}
+
+	55.5%{
+		transform: translatex( calc((100vw + 30vw) * .555) ) rotate(0deg);
+		transform-origin: 80% 120%;
+	}
+
+	58%{
+		transform: translatex( calc((100vw + 30vw) * .58) ) rotate(7deg);
+	}
+
+	61.5%{
+		transform: translatex( calc((100vw + 30vw) * .615) ) rotate(0deg);
+		transform-origin: 80% 120%;
+	}
+	
+	100%{
+	  	transform: translatex(calc(100vw + 30vw));
+	}
+  } 
+
+  /*Wielen draaien*/
+
+@keyframes draaien{
+	0% {
+		transform:rotate(0turn)	
+	} 
+	100% {
+		transform:rotate(1turn)	
+	}
+} 
+
+@keyframes vallenf{
+	0% {
+		transform: translateX(0);
+	}
+
+	38.5%{
+		transform: translatex( calc((100vw + 30vw) * .385) ) rotate(0deg);
+		transform-origin: left bottom;
+	}
+
+	
+
+	55.5%{
+		transform: translatex( calc((100vw + 30vw) * .555) ) rotate(-30deg);
+	}
+
+	60%{
+		transform: translatex( calc((100vw + 30vw) * .60) ) translateY(-2vw) rotate(-45deg) ;
+		transform-origin: left bottom;
+
+	}
+
+	
+	70%, 100%{
+		transform: translatex( calc((100vw + 30vw) * .615) ) translatey(8vh) rotate(-60deg); 
+		 transform-origin: center center;
+	}
+}
+
+@keyframes vallen1e{
+
+}
+
+@keyframes vallend{
+
+}
+
+@keyframes vallen2e{
+
+}
+
+@keyframes vallenx{
+
+}
+
 
