@@ -52,19 +52,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+![afbeelding](https://user-images.githubusercontent.com/103881571/170250886-9f561d29-76b8-482f-8b11-edd02f9774eb.png)
 
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
+Ik vond het heel lastig om mijn vrachtwagen te laten rijden op het heuveltje. Uiteindelijk heb ik om hulp gevraagd en is het gelukt. Ik moet nu alleen nog de laatste letters erook af laten vallen. Voor nu is er nog niks niet gelukt met dank aan Sanne.Ik heb wel een paar dingen veranderd zoals de grote van de heuvel. 
+  
 </details>
 
 
