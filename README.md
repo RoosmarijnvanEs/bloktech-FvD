@@ -62,7 +62,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit was lastig/Is niet gelukt:
   Korte omschrijving met plaatje(s)
-Ik vond het heel lastig om mijn vrachtwagen te laten rijden op het heuveltje. Uiteindelijk heb ik om hulp gevraagd en is het gelukt. Ik moet nu alleen nog de laatste letters erook af laten vallen. Voor nu is er nog niks niet gelukt met dank aan Sanne.Ik heb wel een paar dingen veranderd zoals de grote van de heuvel. 
+Ik vond het heel lastig om mijn vrachtwagen te laten rijden op het heuveltje. Uiteindelijk heb ik om hulp gevraagd en is het gelukt. Ik moet nu alleen nog de laatste letters erook af laten vallen. Voor nu is er nog niks niet gelukt met dank aan Sanne.Ik heb wel een paar dingen veranderd zoals de grote van de heuvel. Ik heb geen gebruik hoeven maken van een box-shadow.
   
 </details>
 
