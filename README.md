@@ -74,16 +74,18 @@ Ik vond het heel lastig om mijn vrachtwagen te laten rijden op het heuveltje. Ui
   <summary>uitwerken na schetsen idee (voor week 5)</summary>
 
 
-  ### Je ontwerp:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="ontwerp opdracht 2">
+  ### Je ontwer
+![opdracht 2](https://user-images.githubusercontent.com/103881571/171061044-e645ffe5-a3ac-423c-b0b3-cf0f820cd11f.png)
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  Ik wil meer gebruik leren maken van de verschillende javascript opties.
+  Ik wil deze opdracht minder eng maken.
+  Ik wil meer zekerheid krijgen in mijn kunnen.
+  Ik wil drag and drop leren gebruik maken.
+  Ik wil leren gebruik maken van een carousel
+ 
 </details>
 
 
