@@ -100,23 +100,67 @@ Ik vond het heel lastig om mijn vrachtwagen te laten rijden op het heuveltje. Ui
 
 
   ### Bevinding 1:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Ik had mijn github nog niet bijgewerkt.
 
   #### oplossing:
-  Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
+ Dit ga ik aan het einde van de dag nog doen.
 
 
 
   ### Bevinding 2:
-  Omschrijving van wat er nog niet orde was (tekst en afbeeding(en)).
+  Het kruisje bij het popup venster staat no raar.
+  ![afbeelding](https://user-images.githubusercontent.com/103881571/174775270-d34d2690-3e8b-45b9-b496-eb544eb19dd0.png)
+
 
   #### oplossing:
   Beschrijving hoe je het hebt hebt opgelost of als het niet gelukt is hoe je het zou oplossen (tekst en afbeeding(en)).
-
+  
 
 
   ### Bevinding 3:
-  ...
+  Er moet nog een formulier komen waar de email toegevoegd kan worden.
+  
+  ### Bevinding 4:
+  Ik wil de carousel nog werkent maken maar ik weet niet of dat nog gaat lukken, dit zou dan een bonus zijn.
+  
+  ### Bevinding 5:
+  De black modus ziet er in de uitvoering hetzelfde uit doordat er een achtergrond plaatje is wat ik niet zwart kan maken. In de code staat er nu wel dat die zwart wordt. Ik denk dat voor de uitvoering het mischien handiger is om bijvoorbeeld de groen donkerder te maken zodat het nog steeds duidelijk is wanneer de darkmodus aan of uit staat. En dit zou ook kunnen bij de popup, hier zou ik wel de kleuren zwart en wit kunnen omdraaien.
+ 
+  
+</details>
+
+
+
+## Opdracht 2 test over werk Ruby Spee
+
+<details>
+  <summary>uitwerken na testen (week 7)</summary>
+
+  Neem minimaal 5 bevindingen op:
+
+
+
+  ### Bevinding 1:
+  Pagina op github nog niet werkend.
+
+  ### Bevinding 2:
+  Procesverslag op github nog niet af.
+
+  ### Bevinding 3:
+  Ze wil nog kijken naar een extra filter, zoeken of sorteren.
+  
+  ### Bevinding 4:
+  Dark light modus gaat nu via een knop ze wil nog kijken of dit ook via de computer kan.
+  
+  ### Bevinding 5:
+  Weinig div`s maar wel gebruik van classes
+  
+  ### Bevinding 6:
+  Maakt gebruik van een API.
+
+  ### Bevinding 7:
+  Ziet er goed verzorgt uit.
+ 
 </details>
 
 
