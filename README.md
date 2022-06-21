@@ -64,6 +64,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Korte omschrijving met plaatje(s)
 Ik vond het heel lastig om mijn vrachtwagen te laten rijden op het heuveltje. Uiteindelijk heb ik om hulp gevraagd en is het gelukt. Ik moet nu alleen nog de laatste letters erook af laten vallen. Voor nu is er nog niks niet gelukt met dank aan Sanne.Ik heb wel een paar dingen veranderd zoals de grote van de heuvel. Ik heb geen gebruik hoeven maken van een box-shadow.
   
+  ### Eind resultaat:
+  ![afbeelding](https://user-images.githubusercontent.com/103881571/174819133-49c4b184-375b-4452-a923-5ee96960487c.png)
+![afbeelding](https://user-images.githubusercontent.com/103881571/174819234-907074c0-a1c8-40a9-b4b1-89f70021fd29.png)
+Alle letters vallen nu en er is een dark modus waarbij de vrachtwagen lichten heeft.
+  
 </details>
 
 
