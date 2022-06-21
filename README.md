@@ -171,17 +171,27 @@ Ik vond het heel lastig om mijn vrachtwagen te laten rijden op het heuveltje. Ui
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
+  
+  Ik heb een kinderfoto`app gemaakt voor familie. De foto`s onderaan de pagina kunnen gesleept worden naar het vakje van de week. Ook kunnen er emails toegevoegd worden aan de lijst. Hiervoor heb ik een pop-up gemaakt. De app is ook responsive.
+  
+  ![afbeelding](https://user-images.githubusercontent.com/103881571/174800179-c886d1ba-6a16-42b6-ab2e-ce2bf8c1df14.png)
+
+  ![afbeelding](https://user-images.githubusercontent.com/103881571/174800044-b4a67b10-79c5-4228-b461-705c2f7de62d.png)
+
+  ![afbeelding](https://user-images.githubusercontent.com/103881571/174799943-b1cc791e-70cd-44f7-855a-6bbd8c56aaa8.png)
+
 
 
   ### Dit ging goed/Heb ik geleerd: 
   Korte omschrijving met plaatje(s)
+Ik heb nog nooit een app responsive gemaakt. Dit is de eerste keer. Dit heb ik zelf uitgezocht. Ook heb ik nog nooit een pop-up gemaakt en een drag and drop. Hier ben ik ook erg trots op. Ik heb geen gebruik gemaakt van div`s of classes.
+  Ook heb ik dark modus gemaakt
+![afbeelding](https://user-images.githubusercontent.com/103881571/174800524-7160fc8f-af8a-4cbf-ae32-c1e3194d3031.png)
+  ![afbeelding](https://user-images.githubusercontent.com/103881571/174806414-95ca3503-da4d-4456-92a8-abdf7a83c403.png)
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Het is me niet gelukt een carousel te maken, het is nu half drie ik heb nog twee uur om dit uit te gaan vogelen. Maar ik ga ervan uit dat dit niet gaat lukken.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
