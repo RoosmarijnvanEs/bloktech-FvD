@@ -3,6 +3,7 @@
 /*********/
 /* FONTS */
 /*********/
+
 @font-face {
 	font-family: 'eenfont';
 	src: url('../fonts/eenfont.woff2') format('woff2'),
@@ -12,9 +13,13 @@
 
 }
 
-
-
-
+body{
+	margin: 0;
+	padding: 0;
+  	grid-template-rows:min-content 1fr;
+	background-color: var(--color-background);
+	background-image: url(../images/sheet.jpg);
+}
 
 /**************/
 /* CSS REMEDY */
@@ -27,31 +32,378 @@ button, summary {
 	cursor: pointer;
 }
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
-:root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+
+@media (prefers-color-scheme:dark){
+	:root{
+		--color-text:white;
+		--color-background:rgb(17, 16, 16);
+		--color-header:green;
+		--color-drag-locatie:rgba(0, 128, 0, 0.218);
+	}
 }
 
-
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
-body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-text);
-  background-color:var(--color-background);
+@media (prefers-color-scheme:light) {
+	:root{
+		--color-text:white;
+		--color-background:white;
+		--color-header:green;
+		--color-drag-locatie:rgba(0, 128, 0, 0.218);
+	}
 }
 
-/* jouw code */
+/*********************/
+/*header*/
+/*********************/
 
+header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 5vw;
+	background-color: var(--color-header);	
+}
+
+h1{
+	font-weight: 500;
+	font-size: 30px;
+	color: var(--color-text);
+	margin: 0;
+	padding: 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header button{
+	position: absolute;
+	top: 1vw;
+	left: 1vw;
+	text-decoration: none;
+	color: var(--color-text);
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background-color: var(--color-header);
+	border: none;
+}
+
+/*********************/
+/*Drop locatie*/
+/*********************/
+
+main{
+	display: flex;
+	justify-content: center;
+}
+
+h2{
+	color: var(--color-header);
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	padding-bottom: 0.5em;
+	display: flex;
+	justify-content: center;
+	white-space: nowrap;
+
+}
+
+main ol{
+	position: absolute;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	top: 7.5em;
+	left: 0;
+	right: 0;
+	list-style: none;
+}
+
+main ol > li{
+	width: 15em;
+	height: 15em;
+	margin: 2.5vw;
+}
+
+/*********************/
+/* kaart Drag locatie */
+/*********************/
+
+
+/*********************/
+/* ul Drag locatie */
+/*********************/
+
+ol li ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	height: 15vw;
+	background-color: var(--color-drag-locatie);
+	position: relative;
+	overflow: hidden;
+}
+ 
+ol li li {
+	height: 100%;
+}
+
+ol li li img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+ol li ul:empty::after{
+	content: "Kies een foto";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 16em;
+	text-align: center;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*********************/
+/*Foto`s*/
+/*********************/
+
+section{
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: absolute;
+	bottom: 1em;
+}
+
+section ul {
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	scroll-behavior: smooth;
+	position: relative;
+	height: 16em;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior-x: contain;
+	list-style: none;
+}
+
+  body.dragging,
+body.dragging * {
+	cursor: grabbing;
+}
+
+section li { 
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-right: 2px;
+	flex-shrink: 0;
+	scroll-snap-align: center;
+	cursor: grab;
+}
+
+section li img {
+	width: auto;
+	height: 10vw;
+	order: -1;
+}
+
+section  li.sortable-ghost {
+	opacity: .25;
+}
+  
+/*********************/
+/* styling van het versleepte item */
+/*********************/
+
+section  li.sortable-drag {
+	cursor: grabbing;
+}
+
+  
+
+@media all and (max-width: 500px){
+	section li img {  
+		height: 35vw; 
+	}
+
+	header{
+		height: 15vw;
+	}
+
+	main ol > li:nth-of-type(2) {
+		position: absolute;
+		left: cacl(50% - 22.5%);
+		top: -10%;
+		z-index: 100;
+	}
+
+	main ol > li{
+		width: 45%;
+		flex-shrink: 0;
+	}
+
+	ol li ul{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		height: 45vw;
+	}
+
+	main ol{
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		top: 7.5em;
+		left: 0;
+		right: 0;
+		list-style: none;
+	}
+
+	h1{
+		font-weight: 300;
+		font-size: 20px;
+	}
+}
+
+/*****************************/
+/*De rechts en links buttons*/
+/***************************/
+
+/* .carousel_track{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+	height: 100%;
+	transition: transform 250ms ease-in;
+}
+
+.carousel_button{
+	position: absolute;
+	top: 40%;
+	transform: translatey(-50%);
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	z-index: 100;
+}
+
+.carousel_button--left{
+	left: 40px;
+}
+
+.carousel_button--right{
+	right: 40px;
+}
+  
+.carousel_button img{
+	width: 30px;
+} */
+
+/*********************/
+/*De indicator balletjes onderaan*/
+/*********************/
+
+/* .carousel_nav{
+	background-color: var(--color-header);
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+}
+
+.carousel_indicator{
+	border: 0;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	background:var(--color-background);
+	margin: 0 12px;
+	cursor: pointer;
+}
+
+.carousel_indicator.current-slide{
+	background: black;
+}
+
+.is-hidden{
+	display: none;
+} */
+
+/*********************/
+/*pop-up_venster*/
+/*********************/
+
+.modal {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	border: 1px solid black;
+	border-radius: 10px;
+	z-index: 10;
+	background-color: white;
+	width: 500px;
+	max-width: 80%;
+	
+  }
+  
+  .modal.active {
+	transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .modal-header {
+	padding: 10px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+  }
+  
+  .modal-header .title {
+	font-size: 1.25rem;
+	font-weight: bold;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color:var(--color-header);
+  }
+  
+  .modal-header .close-button {
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-size: 1.25rem;
+	font-weight: bold;
+  }
+  
+  .modal-body {
+	padding: 10px 15px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  #overlay {
+	position: fixed;
+	opacity: 0;
+	transition: 200ms ease-in-out;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .5);
+	pointer-events: none;
+  }
+  
+  #overlay.active {
+	opacity: 1;
+	pointer-events: all;
+  }
