@@ -32,33 +32,33 @@ button, summary {
 	cursor: pointer;
 }
 
+:root{
+	--color-header:green;
+	--color-drag-locatie:rgba(0, 128, 0, 0.218);
+	--color-text:white;
+	--border-popup:black;
+	--color-overlay:rgba(0, 0, 0, .5);
+	--color-text-dark:black;
+	--color-background:white;
+}
+
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 
 @media (prefers-color-scheme:dark){
 	:root{
-		--color-text:white;
-		--color-background:rgb(17, 16, 16);
-		--color-header:green;
-		--color-drag-locatie:rgba(0, 128, 0, 0.218);
+		--color-text-dark:white;		
+		--color-background:black;
+		--color-header:rgb(2, 60, 2);
+		
 	}
 }
-
-@media (prefers-color-scheme:light) {
-	:root{
-		--color-text:white;
-		--color-background:white;
-		--color-header:green;
-		--color-drag-locatie:rgba(0, 128, 0, 0.218);
-	}
-}
-
 /*********************/
 /*header*/
 /*********************/
 
-header{
+body header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -66,7 +66,7 @@ header{
 	background-color: var(--color-header);	
 }
 
-h1{
+h1:first-of-type{
 	font-weight: 500;
 	font-size: 30px;
 	color: var(--color-text);
@@ -234,7 +234,7 @@ section  li.sortable-drag {
 		height: 35vw; 
 	}
 
-	header{
+	body header{
 		height: 15vw;
 	}
 
@@ -273,125 +273,75 @@ section  li.sortable-drag {
 		font-weight: 300;
 		font-size: 20px;
 	}
+
+	aside header h3{
+		font-size: 10px;
+		padding: 10px;
+		margin: 10px;
+	}
+
+
+	aside header button {
+		top:4%;
+		left: 90%;
+	  }
 }
-
-/*****************************/
-/*De rechts en links buttons*/
-/***************************/
-
-/* .carousel_track{
-	padding: 0;
-	margin: 0;
-	list-style: none;
-	position: relative;
-	height: 100%;
-	transition: transform 250ms ease-in;
-}
-
-.carousel_button{
-	position: absolute;
-	top: 40%;
-	transform: translatey(-50%);
-	background: transparent;
-	border: 0;
-	cursor: pointer;
-	z-index: 100;
-}
-
-.carousel_button--left{
-	left: 40px;
-}
-
-.carousel_button--right{
-	right: 40px;
-}
-  
-.carousel_button img{
-	width: 30px;
-} */
-
-/*********************/
-/*De indicator balletjes onderaan*/
-/*********************/
-
-/* .carousel_nav{
-	background-color: var(--color-header);
-	display: flex;
-	justify-content: center;
-	padding: 10px 0;
-}
-
-.carousel_indicator{
-	border: 0;
-	border-radius: 50%;
-	width: 15px;
-	height: 15px;
-	background:var(--color-background);
-	margin: 0 12px;
-	cursor: pointer;
-}
-
-.carousel_indicator.current-slide{
-	background: black;
-}
-
-.is-hidden{
-	display: none;
-} */
 
 /*********************/
 /*pop-up_venster*/
 /*********************/
 
-.modal {
+aside {
 	position: fixed;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0);
 	transition: 200ms ease-in-out;
-	border: 1px solid black;
-	border-radius: 10px;
-	z-index: 10;
-	background-color: white;
+	border: 1px solid var(--border-popup);
+	z-index: 111;
+	background-color: var(--color-background);
 	width: 500px;
-	max-width: 80%;
-	
-  }
+	max-width: 80%;	
+}
   
-  .modal.active {
+aside.active {
 	transform: translate(-50%, -50%) scale(1);
-  }
+}
   
-  .modal-header {
+aside header{
 	padding: 10px 15px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 1px solid black;
-  }
+	border-bottom: 1px solid var(--border-popup);
+}
   
-  .modal-header .title {
-	font-size: 1.25rem;
+aside header h3 {
+	font-size: 20px;
 	font-weight: bold;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-	color:var(--color-header);
-  }
+	color:var(--color-text);
+	display: flex;
+	align-items: center;
+}
   
-  .modal-header .close-button {
+aside header button {
 	cursor: pointer;
 	border: none;
 	outline: none;
 	background: none;
 	font-size: 1.25rem;
 	font-weight: bold;
-  }
+	left: 90%;
+	top: 5%;
+}
   
-  .modal-body {
+aside p {
 	padding: 10px 15px;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
+}
   
-  #overlay {
+#overlay {
 	position: fixed;
 	opacity: 0;
 	transition: 200ms ease-in-out;
@@ -399,11 +349,66 @@ section  li.sortable-drag {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: rgba(0, 0, 0, .5);
+	background-color: var(--color-overlay);
 	pointer-events: none;
-  }
+}
   
-  #overlay.active {
+#overlay.active {
 	opacity: 1;
 	pointer-events: all;
-  }
+}
+
+/*********************/
+/*Formulier*/
+/*********************/
+
+legend{
+    font-size: 18px;
+    padding:0.25em;
+    margin:1em 0em;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color:var(--color-text-dark);
+	
+}
+
+  fieldset{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top:5%;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background-color:var(--color-drag-locatie);
+	color:var(--color-text-dark);
+}
+
+input[type="submit"]{
+    color:var(--color-text-dark);
+    background-color: var(--color-header);
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin:5%;
+    padding:0.5em;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input[type="submit"]:hover{
+    color: var(--color-header);
+    background-color: var(--color-background);
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+form+figure{
+    height: 50%;
+}
+
+label{
+    padding-bottom:1%;
+    padding-top: 1%;
+}
