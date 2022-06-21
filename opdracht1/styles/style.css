@@ -29,11 +29,58 @@ button, summary {
 	--color-background:#eee;
 	--color-fedex-purple:#4D148c;
 	--color-fedex-orange:#FF6600;
+	--color-berg:gray;
+	--color-light-voor:rgb(242, 242, 8);
 }
+
+@media(prefers-color-scheme :dark){
+	:root{
+		--color-background:black;
+		--color-light-voor:yellow;
+		--color-light-achter:yellow;
+	}
+	
+}
+
+@media (prefers-color-scheme :light) {
+	:root{
+		--color-background:rgb(193, 236, 255);
+		--color-light-voor:none;
+	}
+}
+
+@media (prefers-reduced-motion) {
+	div{
+		right: 100vw;	
+	  animation-name: rijden;
+	}
+  }
 
 /****************/
 /* JOUW STYLING */
 /****************/
+div::before{
+	content: "";
+	position:absolute;
+	height:14vw;
+	width: 14vw;
+	bottom:-5vh;
+	left:98%;
+	clip-path: polygon(0 65%, 100% 100%, 53% 100%, 0 72%);
+	background-color: var(--color-light-voor);
+}
+
+div::after{
+	content: "";
+	position:absolute;
+	height:14vw;
+	width: 14vw;
+	bottom:-1vh;
+	right:98%;
+	clip-path: polygon(0 100%, 100% 85%, 100% 92%, 60% 100%);
+	background-color: var(--color-light-achter);
+}
+
 body {
   font-family:SansSerifBldFLF;
   background-color:var(--color-background);
@@ -57,8 +104,8 @@ div {
 
  /* vrachtwagen img */
  div img {
-	 display: block;
-	width:100%;
+	display: block;
+	width: 100%;
  }
 
  /*Wielen*/
@@ -88,6 +135,7 @@ div span:nth-of-type(2) {
 	right: 5%;
  }
 
+
  /*Berg*/
 
 body::after{
@@ -98,7 +146,7 @@ body::after{
 	bottom:20vh;
 	left:calc(50vw - (100vw + 30vw) * .02);
 	clip-path: polygon(0% 99%, 28% 72%, 45% 63%, 53% 68%, 62% 67%, 71% 76%, 77% 82%, 90% 92%, 97% 99%, 100% 100%);
-	background-color: gray;
+	background-color: var(--color-berg);
  }
 
  /*Fedex letters*/
@@ -113,7 +161,6 @@ h1 span {
 	position: fixed;
 	bottom: 28vh;
 	animation: rijden 10s linear infinite;
-	/* background-color: #0ff8; */
 	line-height: .7em;
 }
 
@@ -143,25 +190,28 @@ h1 span:nth-of-type(1){
 
 h1 span:nth-of-type(2){
 	right: 122vw;
-	/* animation: vallene 10s linear infinite; */
+	animation: vallen1e 10s linear forwards;
 }
 
 /*d*/
 
 h1 span:nth-of-type(3){
 	right: 118.1vw;
+	animation: vallend 10s linear forwards;
 }
 
 /*E*/
 
 h1 span:nth-of-type(4){
 	right: 114.8vw;
+	animation: vallen2e 10s linear forwards;
 }
 
 /*x*/
 
 h1 span:nth-of-type(5){
 	right: 110.5vw;
+	animation: vallenx 10s linear forwards;
 }
 
 /*Keyframes*/
@@ -247,19 +297,119 @@ h1 span:nth-of-type(5){
 }
 
 @keyframes vallen1e{
+	0% {
+		transform: translateX(0);
+	}
 
+	38.5%{
+		transform: translatex( calc((100vw + 30vw) * .385) ) rotate(0deg);
+		transform-origin: left bottom;
+	}
+
+	
+
+	55.5%{
+		transform: translatex( calc((100vw + 31vw) * .555) ) rotate(-50deg);
+	}
+
+	60%{
+		transform: translatex( calc((100vw + 31vw) * .60) ) translateY(-2vw) rotate(-75deg) ;
+		transform-origin: left bottom;
+
+	}
+
+	
+	70%, 100%{
+		transform: translatex( calc((100vw + 30vw) * .615) ) translatey(8vh) rotate(-100deg); 
+		 transform-origin: center center;
+	}
 }
 
 @keyframes vallend{
+	0% {
+		transform: translateX(0);
+	}
 
+	38.5%{
+		transform: translatex( calc((100vw + 30vw) * .385) ) rotate(0deg);
+		transform-origin: left bottom;
+	}
+
+	
+
+	55.5%{
+		transform: translatex( calc((100vw + 32vw) * .555) ) rotate(-60deg);
+	}
+
+	60%{
+		transform: translatex( calc((100vw + 32vw) * .60) ) translateY(-2vw) rotate(-75deg) ;
+		transform-origin: left bottom;
+
+	}
+
+	
+	70%, 100%{
+		transform: translatex( calc((100vw + 32vw) * .615) ) translatey(8vh) rotate(-76deg); 
+		 transform-origin: center center;
+	}
 }
 
 @keyframes vallen2e{
+	0% {
+		transform: translateX(0);
+	}
 
+	38.5%{
+		transform: translatex( calc((100vw + 30vw) * .385) ) rotate(0deg);
+		transform-origin: left bottom;
+	}
+
+	
+
+	55.5%{
+		transform: translatex( calc((100vw + 33vw) * .555) ) rotate(-45deg);
+	}
+
+	60%{
+		transform: translatex( calc((100vw + 34vw) * .60) ) translateY(-2vw) rotate(-50deg) ;
+		transform-origin: left bottom;
+
+	}
+
+	
+	70%, 100%{
+		transform: translatex( calc((100vw + 36vw) * .615) ) translatey(8vh) rotate(-50deg); 
+			transform-origin: center center;
+	}
 }
 
 @keyframes vallenx{
+	0% {
+		transform: translateX(0);
+	}
 
+	38.5%{
+		transform: translatex( calc((100vw + 30vw) * .385) ) rotate(0deg);
+		transform-origin: left bottom;
+	}
+
+	
+
+	55.5%{
+		transform: translatex( calc((100vw + 33vw) * .555) ) rotate(-30deg);
+	}
+
+	60%{
+		transform: translatex( calc((100vw + 34vw) * .60) ) translateY(-2vw) rotate(-28deg) ;
+		transform-origin: left bottom;
+
+	}
+
+	
+	70%, 100%{
+		transform: translatex( calc((100vw + 38vw) * .615) ) translatey(8vh) rotate(0deg); 
+			transform-origin: center center;
+	}
 }
 
 
